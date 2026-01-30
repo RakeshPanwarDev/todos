@@ -1,0 +1,65 @@
+<div class="container py-4">
+  <div class="row g-4">
+
+    <!-- ================= SIGNAL COUNTER ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm text-center h-100">
+        <div class="card-header fw-bold">
+          ⚡ Counter with Signal
+        </div>
+        <div class="card-body">
+          <h2 class="display-4 fw-bold text-primary">
+            {{ counter() }}
+          </h2>
+
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-success" (click)="handleEventWithSignal('plus')">+</button>
+            <button class="btn btn-danger" (click)="handleEventWithSignal('minus')">-</button>
+            <button class="btn btn-secondary" (click)="handleEventWithSignal('reset')">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= PROPERTY COUNTER ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm text-center h-100">
+        <div class="card-header fw-bold">
+          🧩 Counter with Property
+        </div>
+        <div class="card-body">
+          <h2 class="display-4 fw-bold text-warning">
+            {{counter1 }}
+          </h2>
+
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-success" (click)="handleEvent('plus')">+</button>
+            <button class="btn btn-danger" (click)="handleEvent('minus')">-</button>
+            <button class="btn btn-secondary" (click)="handleEvent('reset')">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= RXJS COUNTER ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm text-center h-100">
+        <div class="card-header fw-bold">
+          🔁 Counter with RxJS
+        </div>
+        <div class="card-body">
+          <h2 class="display-4 fw-bold text-info">
+            {{ counter$ | async }}
+          </h2>
+
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-success" (click)="handleEventWithRxjs('plus')">+</button>
+            <button class="btn btn-danger" (click)="handleEventWithRxjs('minus')">-</button>
+            <button class="btn btn-secondary" (click)="handleEventWithRxjs('reset')">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

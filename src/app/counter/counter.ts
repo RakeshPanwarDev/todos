@@ -1,0 +1,51 @@
+import { AsyncPipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { async, BehaviorSubject } from 'rxjs';
+
+@Component({
+  selector: 'app-counter',
+  imports: [AsyncPipe],
+  templateUrl: './counter.html',
+  styleUrl: './counter.css',
+})
+export class Counter {
+
+
+  name = 'Angular';
+  value = '';
+
+  counter = signal(0);
+  counter1 = 0;
+  counter$ = new BehaviorSubject(0);
+
+  onInput(value: any) {
+    this.value = value.target.value;
+  }
+
+  handleEvent(action: string) {
+    if (action === 'plus') this.counter1++;
+    else if (action === 'minus') {
+      if (this.counter1 >= 1) this.counter1--;
+    } else if (action === 'reset') {
+      this.counter1 = 0;
+    }
+  }
+  handleEventWithSignal(action: string) {
+    if (action === 'plus') this.counter.update((count) => count + 1);
+    else if (action === 'minus') {
+      if (this.counter() >= 1) this.counter.update((count) => count - 1);
+    } else if (action === 'reset') {
+      this.counter.set(0);
+    }
+  }
+  handleEventWithRxjs(action: string) {
+    if (action === 'plus') {
+      this.counter$.next(this.counter$.value + 1);
+    } else if (action === 'minus') {
+      if (this.counter$.value >= 1) this.counter$.next(this.counter$.value - 1);
+    } else if (action === 'reset') {
+      this.counter$.next(0);
+    }
+  }
+
+}

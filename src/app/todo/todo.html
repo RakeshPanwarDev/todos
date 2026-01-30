@@ -1,0 +1,64 @@
+<div class="container py-5">
+  <h1 class="text-center mb-4 fw-bold">📝 Todo App</h1>
+
+  <!-- Todo Form -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <form id="todoForm">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-7">
+            <input
+              type="text"
+              id="todoInput"
+              class="form-control form-control-lg"
+              placeholder="Enter todo..."
+              [value]="newTodo().text"
+              (input)="newTodo.set({ text: $event.target.value, done: false })"
+              required
+            />
+          </div>
+
+          <div class="col-md-3">
+            <button
+              type="button"
+              (click)="saveTodo(newTodo())"
+              class="btn btn-primary btn-lg w-100">
+              ➕ Add Todo
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Todo List -->
+  <div class="card shadow-sm">
+    <div class="card-header bg-light">
+      <h5 class="mb-0 fw-semibold">Todo List</h5>
+    </div>
+
+    @for (todo of todos(); track $index) {
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="fw-semibold">
+            {{ $index + 1 }}.
+            <span
+              (click)="toggleTodo($index)"
+              class="ms-2"
+              style="cursor:pointer"
+              [style.textDecoration]="todo.done ? 'line-through' : 'none'"
+              [class.text-muted]="todo.done">
+              {{ todo.text }}
+            </span>
+          </span>
+
+          <button
+            class="btn btn-sm btn-outline-danger"
+            (click)="removeTodo($index)">
+            ❌
+          </button>
+        </li>
+      </ul>
+    }
+  </div>
+</div>

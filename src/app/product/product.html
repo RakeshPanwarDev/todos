@@ -1,0 +1,32 @@
+<hr>
+
+<div class="container py-4">
+  <div class="card shadow-sm">
+    <div class="card-header">
+      <h4 class="mb-0 fw-bold">🔍 Product Search</h4>
+    </div>
+
+    <div class="card-body">
+      <input
+        class="form-control form-control-lg mb-3"
+        placeholder="Search product..."
+        [value]="search()"
+        (input)="search.set($event.target.value); updateUrl()"
+      />
+
+      <ul class="list-group">
+        @for (item of filteredProducts(); track $index) {
+          <li class="list-group-item d-flex align-items-center">
+            <span class="fw-semibold">{{ item }}</span>
+          </li>
+        }
+      </ul>
+
+      @if (filteredProducts().length === 0) {
+        <p class="text-muted mt-3 mb-0 text-center">
+          ❌ No products found
+        </p>
+      }
+    </div>
+  </div>
+</div>
