@@ -1,0 +1,42 @@
+<div class="review-wrapper">
+
+  @if (!loading() && currentReview; as review) {
+
+    <h2 class="heading">⭐ Customer Reviews</h2>
+    <div class="review-card">
+
+      <img
+        class="avatar"
+        [src]="review.image"
+        alt="{{ review.name }}"
+      />
+
+      <h3 class="name">{{ review.name }}</h3>
+
+      <p class="job">{{ review.job }}</p>
+
+      <p class="comment">
+        “{{ review.comment }}”
+      </p>
+
+      <div class="buttons">
+        <button class="btn" (click)="prevReview()">⬅ Prev</button>
+
+        <button class="btn random" (click)="randomReview()">
+          🔀 Random
+        </button>
+
+        <button class="btn" (click)="nextReview()">Next ➡</button>
+      </div>
+
+    </div>
+
+  } @else {
+
+    <div class="loading">
+      Loading reviews...
+    </div>
+
+  }
+
+</div>

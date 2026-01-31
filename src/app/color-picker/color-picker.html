@@ -1,0 +1,26 @@
+<div class="color-container">
+  <h1 class="title">🎨 Color Picker App</h1>
+
+  <div class="controls">
+    <input
+      type="color"
+      class="color-input"
+      (input)="selectedColor.set($event.target.value)"
+      (click)="updateColor(selectedColor())"
+    />
+  </div>
+
+  <div class="preview-section">
+    <div
+      class="color-box"
+      [style.background]="selectedColor()">
+    </div>
+
+    <p class="color-text">
+      Selected Color:
+      <span>{{ selectedColor() }}</span>
+    </p>
+    <button class="btn btn-success" (click)="copyToClipboard()">
+      Copy Color Code</button>
+  </div>
+</div>
