@@ -61,5 +61,25 @@
       </div>
     </div>
 
+     <!-- ================= Ngrx COUNTER ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm text-center h-100">
+        <div class="card-header fw-bold">
+          🔁 Counter with Ngrx
+        </div>
+        <div class="card-body">
+          <h2 class="display-4 fw-bold text-info">
+            {{ ngrxCounter$ | async }}
+          </h2>
+
+          <div class="d-flex justify-content-center gap-2">
+            <button class="btn btn-success" (click)="handleEventWithNgrx('plus')">+</button>
+            <button class="btn btn-danger" (click)="handleEventWithNgrx('minus')">-</button>
+            <button class="btn btn-secondary" (click)="handleEventWithNgrx('reset')">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
