@@ -10,7 +10,7 @@ export const counterReducer = createReducer(
     on(increment, (state) => state + 1),
 
     //on decrement action decrease state by 1   
-    on(decrement, (state) => state - 1),
+    on(decrement, (state) => state > 0 ? state - 1 : state),
 
     //on reset action set state to 0
     on(reset, () =>initialState),
