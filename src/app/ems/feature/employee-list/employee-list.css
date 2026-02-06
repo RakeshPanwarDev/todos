@@ -1,0 +1,113 @@
+/* ===== FORM ===== */
+.form-container {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.form-container h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.inline-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inline-form input {
+  height: 36px;
+  padding: 6px 10px;
+  min-width: 160px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inline-form input:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.inline-form button {
+  height: 36px;
+  padding: 0 16px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.inline-form button:hover {
+  background: #125aa0;
+}
+
+/* ===== TABLE ===== */
+.employee-container {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.employee-container h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.employee-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.employee-table tr:hover {
+  background: #fafafa;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #1976d2;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #125aa0;
+}
+
+.delete-btn:hover {
+  background: #a62828;
+}

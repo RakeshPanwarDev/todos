@@ -1,0 +1,46 @@
+<div class="form-container">
+  <h2>Add New Employee</h2>
+
+  <form [formGroup]="employeeForm" class="inline-form">
+    <input type="text" placeholder="Name" name="name" formControlName="name" required />
+    <input type="text" placeholder="Role" name="role" formControlName="role" required />
+    <input type="text" placeholder="Department" name="department" formControlName="department" />
+    <input type="email" placeholder="Email" name="email" formControlName="email" />
+    <button type="submit" (click)="addEmployee()">
+      {{ isEditMode() ? "Update Employee" : "Add Employee" }}
+    </button>
+  </form> 
+</div>
+
+<div class="employee-container">
+  <h2>Employee List</h2>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Department</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (emp of employees(); track emp.id) {
+        <tr>
+          <td>{{ $index +1 }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.role }}</td>
+          <td>{{ emp.department }}</td>
+          <td>{{ emp.email }}</td>
+          <td class="actions">
+            <button class="btn edit-btn" (click)="setEditData(emp.id!, emp)">Edit</button>
+            <button class="btn delete-btn" (click)="deleteEmployee(emp.id!)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

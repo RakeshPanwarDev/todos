@@ -7,6 +7,7 @@ import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { ColorPicker } from './color-picker/color-picker';
 import { Review } from './review/review';
+import { EmployeeList } from './ems/feature/employee-list/employee-list';
 
 export const routes: Routes = [
     { path: "home", component: Home },
@@ -16,6 +17,7 @@ export const routes: Routes = [
     { path: "counter", component: Counter },
     { path: "users", component: UserList },
     { path: "todo", component: Todo },
+    { path: "ems", component: EmployeeList },
     {
         path: '',
         redirectTo: 'home',
