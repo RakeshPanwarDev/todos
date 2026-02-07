@@ -1,54 +1,125 @@
 {
-  "reviews":[
+  "reviews": [
     {
-      "id":1,
-      "image":"https://randomuser.me/api/portraits/men/75.jpg",
-      "name":"Alice",
-      "job":"Developer",
-      "comment":"Great product!"
+      "id": "1",
+      "image": "https://randomuser.me/api/portraits/men/75.jpg",
+      "name": "Alice",
+      "job": "Developer",
+      "comment": "Great product!"
     },
     {
-      "id":2,
-      "image":"https://randomuser.me/api/portraits/women/65.jpg",
-      "name":"Bob",
-      "job":"Designer",
-      "comment":"Loved the design and usability."
+      "id": "2",
+      "image": "https://randomuser.me/api/portraits/women/65.jpg",
+      "name": "Bob",
+      "job": "Designer",
+      "comment": "Loved the design and usability."
     },
     {
-      "id":3,
-      "image":"https://randomuser.me/api/portraits/men/45.jpg",
-      "name":"Charlie",
-      "job":"Manager",
-      "comment":"Helped our team stay organized."
-    },  
-    {
-      "id":4,
-      "image":"https://randomuser.me/api/portraits/women/25.jpg",
-      "name":"Diana",
-      "job":"Marketer",
-      "comment":"Boosted our marketing efforts." 
+      "id": "3",
+      "image": "https://randomuser.me/api/portraits/men/45.jpg",
+      "name": "Charlie",
+      "job": "Manager",
+      "comment": "Helped our team stay organized."
     },
     {
-      "id":5,
-      "image":"https://randomuser.me/api/portraits/men/15.jpg",
-      "name":"Ethan",
-      "job":"Analyst",
-      "comment":"Provided valuable insights."
-    }, 
+      "id": "4",
+      "image": "https://randomuser.me/api/portraits/women/25.jpg",
+      "name": "Diana",
+      "job": "Marketer",
+      "comment": "Boosted our marketing efforts."
+    },
     {
-      "id":6,
-      "image":"https://randomuser.me/api/portraits/women/35.jpg",
-      "name":"Fiona",
-      "job":"Consultant",
-      "comment":"Excellent consulting services."
-    } ,
+      "id": "5",
+      "image": "https://randomuser.me/api/portraits/men/15.jpg",
+      "name": "Ethan",
+      "job": "Analyst",
+      "comment": "Provided valuable insights."
+    },
     {
-      "id":7,
-      "image":"https://randomuser.me/api/portraits/men/85.jpg",
-      "name":"George",
-      "job":"Engineer",
-      "comment":"Robust and reliable."
-    } 
-    
+      "id": "6",
+      "image": "https://randomuser.me/api/portraits/women/35.jpg",
+      "name": "Fiona",
+      "job": "Consultant",
+      "comment": "Excellent consulting services."
+    },
+    {
+      "id": "7",
+      "image": "https://randomuser.me/api/portraits/men/85.jpg",
+      "name": "George",
+      "job": "Engineer",
+      "comment": "Robust and reliable."
+    }
+  ],
+  "employees": [
+    {
+      "id": "2",
+      "name": "Bob Smith",
+      "role": "UI/UX Designer",
+      "department": "Design",
+      "email": "bob.smith@example.com"
+    },
+    {
+      "name": "Charlie Brown",
+      "role": "Project Manager",
+      "department": "Management12",
+      "email": "charlie.brown@example.com",
+      "id": "3"
+    },
+    {
+      "id": "1756",
+      "name": "sdc",
+      "role": "SDCVAS",
+      "department": "XCV",
+      "email": "zxcvs"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "First Post",
+      "views": "123"
+    },
+    {
+      "id": "2",
+      "title": "Second Post",
+      "views": "222"
+    },
+    {
+      "id": "4a7e",
+      "title": "Third Post",
+      "views": "333"
+    },
+    {
+      "id": "5b8f",
+      "title": "Fourth Post",
+      "views": "444"
+    },
+    {
+      "id": "6c9g",
+      "title": "Fifth Post",
+      "views": "555"
+    }
+  ],
+  "todos": [
+    {
+      "id": "6161",
+      "text": "Todo 1",
+      "done": false
+    },
+    {
+      "id": "7211",
+      "text": "Todo 2",
+      "done": false
+    },
+    {
+      "id": "c80f",
+      "text": "shopping",
+      "done": false
+    },
+    {
+      "id": "09f3",
+      "text": "party",
+      "done": false
+    }
   ]
 }

@@ -1,32 +1,57 @@
-<hr>
+<div class="row">
+  <div class="col-6">
+    <div class="container py-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h4 class="mb-0 fw-bold">🔍 Product Search</h4>
+        </div>
 
-<div class="container py-4">
-  <div class="card shadow-sm">
-    <div class="card-header">
-      <h4 class="mb-0 fw-bold">🔍 Product Search</h4>
+        <div class="card-body">
+          <input class="form-control form-control-lg mb-3" placeholder="Search product..." [value]="search()"
+            (input)="search.set($event.target.value); updateUrl()" />
+
+          <ul class="list-group">
+            @for (item of filteredProducts(); track $index) {
+            <li class="list-group-item d-flex align-items-center">
+              <span class="fw-semibold">{{ item }}</span>
+            </li>
+            }
+          </ul>
+
+          @if (filteredProducts().length === 0) {
+          <p class="text-muted mt-3 mb-0 text-center">
+            ❌ No products found
+          </p>
+          }
+        </div>
+      </div>
     </div>
 
-    <div class="card-body">
-      <input
-        class="form-control form-control-lg mb-3"
-        placeholder="Search product..."
-        [value]="search()"
-        (input)="search.set($event.target.value); updateUrl()"
-      />
-
-      <ul class="list-group">
-        @for (item of filteredProducts(); track $index) {
-          <li class="list-group-item d-flex align-items-center">
-            <span class="fw-semibold">{{ item }}</span>
-          </li>
-        }
-      </ul>
-
-      @if (filteredProducts().length === 0) {
-        <p class="text-muted mt-3 mb-0 text-center">
-          ❌ No products found
-        </p>
-      }
-    </div>
   </div>
+  <div class="col-6">
+    <div class="container py-4">
+      <div class="card shadow-sm">
+        <div class="card-header">
+          <h4 class="mb-0 fw-bold">Depandent DropDown</h4>
+        </div>
+        <div>
+          <label for="">State</label>
+          <select class="form-select" [(ngModel)]="selectedStateId" (change)="onCountryChange($event)">
+            <option value="select" >select State</option>
+            @for (state of stateList; track $index) {
+             <option value="{{state.stateId}}">{{state.stateName}}</option>
+            }
+          </select>
+        </div>
+         <div>
+           <label for="">City</label>
+          <select class="form-select">
+            <option value="">select City</option>
+            @for (city of citiesForSelectedState; track $index) {
+              <option value="{{city.cityId}}">{{city.cityName}}</option>  
+            }
+          </select>
+        </div>
+      </div>
+    </div>
 </div>

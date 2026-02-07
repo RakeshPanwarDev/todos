@@ -1,0 +1,65 @@
+/* Overall container spacing */
+.col-6 .container {
+  max-width: 100%;
+}
+
+/* Card styling */
+.col-6 .card {
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+}
+
+/* Card header */
+.col-6 .card-header {
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 14px 18px;
+}
+
+.col-6 .card-header h4 {
+  font-size: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* Inner content spacing */
+.col-6 .card > div {
+  padding: 14px 18px;
+}
+
+/* Label styling */
+.col-6 label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Select dropdown */
+.col-6 .form-select {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Focus effect */
+.col-6 .form-select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 0.15rem rgba(25, 118, 210, 0.25);
+}
+
+/* Space between State & City */
+.col-6 .card > div + div {
+  margin-top: 10px;
+}
+
+/* Small screen friendly */
+@media (max-width: 768px) {
+  .col-6 {
+    width: 100%;
+  }
+}
