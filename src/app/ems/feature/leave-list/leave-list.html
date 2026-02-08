@@ -1,1 +1,33 @@
-<p>leave-list works!</p>
+<div class="leave-list-container">
+  <h2 class="title">Leave Requests</h2>
+
+  <table class="leave-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Employee Name</th>
+        <th>Reason</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (leave of leaves(); track leave.id; let i = $index) {
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ leave.employeeName }}</td>
+          <td>{{ leave.reason }}</td>
+          <td>
+            <span
+              class="status"
+              [class.approved]="leave.status === 'Approved'"
+              [class.pending]="leave.status === 'Pending'"
+            >
+              {{ leave.status }}
+            </span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

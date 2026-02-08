@@ -61,16 +61,30 @@
     {
       "name": "Charlie Brown",
       "role": "Project Manager",
-      "department": "Management12",
+      "department": "Management",
       "email": "charlie.brown@example.com",
       "id": "3"
     },
     {
-      "id": "1756",
-      "name": "sdc",
-      "role": "SDCVAS",
-      "department": "XCV",
-      "email": "zxcvs"
+      "id": "4",
+      "name": "Diana Prince",
+      "role": "Software Engineer",
+      "department": "Development",
+      "email": "diana.prince@example.com"
+    },
+    {
+      "id": "5",
+      "name": "Ethan Hunt",
+      "role": "Data Analyst",
+      "department": "Analytics",
+      "email": "ethan.hunt@example.com"
+    },
+    {
+      "id": "6",
+      "name": "Fiona Gallagher",
+      "role": "HR Specialist",
+      "department": "Human Resources",
+      "email": "fiona.gallagher@example.com"
     }
   ],
   "posts": [
@@ -120,6 +134,38 @@
       "id": "09f3",
       "text": "party",
       "done": false
+    }
+  ],
+  "leaves": [
+    {
+      "id": "1",
+      "employeeName": "Alice Johnson",
+      "reason": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "id": "2",
+      "employeeName": "Bob Smith",
+      "reason": "Personal Leave",
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "employeeName": "Charlie Brown",
+      "reason": "Medical Leave",
+      "status": "Pending"
+    },
+    {
+      "id": "4",
+      "employeeName": "Diana Prince",
+      "reason": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "id": "5",
+      "employeeName": "Ethan Hunt",
+      "reason": "Personal Leave",
+      "status": "Approved"
     }
   ]
 }

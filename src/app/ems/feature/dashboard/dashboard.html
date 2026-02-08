@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<div class="dashboard-cards">
+  <!-- Employee Card -->
+  <div class="dashboard-card employee-card">
+    <div class="card-header">
+      <h3>Total Employees</h3>
+    </div>
+    <div class="card-body" [routerLink]="['/ems', 'employees']">
+      <h1>{{employees().length}}</h1>
+      <p>Active Employees</p>
+    </div>
+  </div>
+
+  <!-- Leave Card -->
+  <div class="dashboard-card leave-card">
+    <div class="card-header">
+      <h3>Total Leaves</h3>
+    </div>
+    <div class="card-body" [routerLink]="['/ems', 'leave']">
+      <h1>{{leaves().length}}</h1>
+      <p>Pending Leave Requests</p>
+    </div>
+  </div>
+</div>

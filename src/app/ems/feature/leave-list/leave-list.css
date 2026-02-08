@@ -1,0 +1,78 @@
+.leave-list-container {
+  padding: 20px;
+  background: #f9fafb;
+}
+
+/* Title */
+.title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Table */
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.leave-table thead {
+  background: #f1f5f9;
+}
+
+.leave-table th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Rows */
+.leave-table td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.leave-table tr:hover {
+  background: #f8fafc;
+}
+
+/* Status Badge */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Approved */
+.status.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Pending */
+.status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leave-table th,
+  .leave-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

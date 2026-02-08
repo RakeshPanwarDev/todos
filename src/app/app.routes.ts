@@ -8,6 +8,9 @@ import { PageNotFound } from './page-not-found/page-not-found';
 import { ColorPicker } from './color-picker/color-picker';
 import { Review } from './review/review';
 import { EmployeeList } from './ems/feature/employee-list/employee-list';
+import { EmsHome } from './ems/ems-home/ems-home';
+import { LeaveList } from './ems/feature/leave-list/leave-list';
+import { Dashboard } from './ems/feature/dashboard/dashboard';
 
 export const routes: Routes = [
     { path: "home", component: Home },
@@ -17,7 +20,14 @@ export const routes: Routes = [
     { path: "counter", component: Counter },
     { path: "users", component: UserList },
     { path: "todo", component: Todo },
-    { path: "ems", component: EmployeeList },
+    { path: "ems", component: EmsHome,
+        children: [
+            { path: "employees", component: EmployeeList },
+            { path: "dashboard", component: Dashboard },
+            { path: "leave", component: LeaveList },
+            {redirectTo: 'dashboard', pathMatch: 'full', path: '' }
+        ]
+    },
     {
         path: '',
         redirectTo: 'home',

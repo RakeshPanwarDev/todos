@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { LeaveService } from '../../../services/leave-service';
 
 @Component({
   selector: 'app-leave-list',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './leave-list.css',
 })
 export class LeaveList {
+
+  leaveService=inject(LeaveService);
+
+  leaves=signal<any[]>([]);
+
+  ngOnInit() {
+    this.leaveService.getLeaves().subscribe((leaves: any[]) => {
+      this.leaves.set(leaves);
+    });
+  }
 
 }
